@@ -48,8 +48,8 @@ rm -rf $RPM_BUILD_ROOT
 %doc %lang(pl) doc/pl
 %{_datadir}/consolefonts/*
 %{_datadir}/consoletrans/*
-%attr(755, root, root) %{_libdir}/konwert/aux/dynafont
-%attr(755, root, root) %{_datadir}/konwert/filters/dynafont
+%attr(755,root,root) %{_libdir}/konwert/aux/dynafont
+%attr(755,root,root) %{_datadir}/konwert/filters/dynafont
 
 %changelog
 * Tue Jan 26 1999 Micha³ Kuratczyk <kurkens@polbox.com>
