@@ -8,9 +8,9 @@ Group:		Applications/Text
 Source0:	http://qrczak.ids.net.pl/programy/linux/%{name}/%{name}-%{version}.tar.gz
 Source1:	iso02grf.psf.gz
 URL:		http://qrczak.ids.net.pl/programy/linux/fonty/
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:	perl
 Requires:	console-tools
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The Fonty package contains various fonts for Linux text console and
@@ -32,7 +32,7 @@ OPTFLAGS="$OPTFLAGS -fno-rtti -fno-exceptions"
 	CXXFLAGS="$OPTFLAGS" \
 	consoleprefix=%{_prefix} \
 	konwertprefix=%{_prefix} \
-	perl=%{_bindir}/perl \
+	perl=/usr/bin/perl \
 	docdir=%{_docdir}/%{name}-%{version}
 
 %install
@@ -49,8 +49,6 @@ rm -f doc/pl/{DO_ZROBIENIA,ZMIANY}
 cp -a doc/en/TODO doc/pl/DO_ZROBIENIA
 cp -a doc/en/CHANGES doc/pl/ZMIANY
 
-gzip -9nf doc/en/* doc/pl/*
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -59,6 +57,8 @@ rm -rf $RPM_BUILD_ROOT
 %doc doc/en
 %doc %lang(pl) doc/pl
 %{_datadir}/consolefonts/*
-%{_datadir}/consoletrans/*
+# consoletrans/qrczak.fallback conflicts with console-data
+# and is useless with kbd (kbd doesn't support fallback tables)
+#%{_datadir}/consoletrans/*
 %attr(755,root,root) %{_libdir}/konwert/aux/dynafont
 %attr(755,root,root) %{_datadir}/konwert/filters/dynafont
