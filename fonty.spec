@@ -10,7 +10,7 @@ Source0:	http://qrczak.home.ml.org/programy/linux/%{name}/%{name}-%{version}.tar
 Source1:        iso02grf.psf.gz
 URL:		http://qrczak.home.ml.org/programy/linux/fonty/
 Requires:	console-tools
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The Fonty package contains various fonts for Linux text console and
