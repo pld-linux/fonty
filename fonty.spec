@@ -5,9 +5,6 @@ Version:	1.0
 Release:	4
 License:	GPL
 Group:		Applications/Text
-Group(de):	Applikationen/Text
-Group(fr):	Utilitaires/Texte
-Group(pl):	Aplikacje/Tekst
 Source0:	http://qrczak.ids.net.pl/programy/linux/%{name}/%{name}-%{version}.tar.gz
 Source1:	iso02grf.psf.gz
 URL:		http://qrczak.ids.net.pl/programy/linux/fonty/
