@@ -5,6 +5,7 @@ Version:     1.0
 Release:     1
 Copyright:   GPL
 Group:	     Utilities/Text
+Group(pl):   Narzêdzia/Tekst
 Source:	     http://qrczak.home.ml.org/programy/linux/%{name}/%{name}-%{version}.tar.gz
 URL:	     http://qrczak.home.ml.org/programy/linux/fonty/
 Requires:    console-tools
@@ -51,6 +52,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755, root, root) /usr/share/konwert/filters/dynafont
 
 %changelog
+* Tue Jan 26 1999 Micha³ Kuratczyk <kurkens@polbox.com>
+- added "Group(pl)"
+
 * Sat Nov 28 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [1.0-1]
 - simplification in %files,
