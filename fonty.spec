@@ -29,7 +29,7 @@ tysi±ce ró¿nych znaków.
 %setup -q
 
 %build
-OPTFLAGS="%{?debug:-g -O}%{!?debug:$RPM_OPT_FLAGS -fomit-frame-pointer}"
+OPTFLAGS="%{?debug:-g -O0}%{!?debug:$RPM_OPT_FLAGS -fomit-frame-pointer}"
 OPTFLAGS="$OPTFLAGS -fno-rtti -fno-exceptions"
 %{__make} \
 	CXXFLAGS="$OPTFLAGS" \
