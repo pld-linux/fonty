@@ -2,11 +2,12 @@ Summary:	Fonts on Linux console
 Summary(pl):	Fonty na konsoli Linuxa
 Name:		fonty
 Version:	1.0
-Release:	2
+Release:	3
 Copyright:	GPL
 Group:		Utilities/Text
 Group(pl):	Narzêdzia/Tekst
-Source:		http://qrczak.home.ml.org/programy/linux/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://qrczak.home.ml.org/programy/linux/%{name}/%{name}-%{version}.tar.gz
+Source1:        iso02grf.psf.gz
 URL:		http://qrczak.home.ml.org/programy/linux/fonty/
 Requires:	console-tools
 BuildRoot:	/tmp/%{name}-%{version}-root
@@ -29,7 +30,7 @@ CXXFLAGS=$RPM_OPT_FLAGS make \
 	consoleprefix=/usr \
 	konwertprefix=/usr \
 	perl=%{_bindir}/perl \
-	docdir=/usr/share/doc/fonty-%{version}
+	docdir=%{_docdir}/%{name}-%{version}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -37,7 +38,15 @@ make install \
 	consoleprefix=$RPM_BUILD_ROOT/usr \
 	konwertprefix=$RPM_BUILD_ROOT/usr \
 	perl=%{_bindir}/perl \
-	docdir=$RPM_BUILD_ROOT/usr/share/doc/fonty-%{version}
+	docdir=$RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
+
+install %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/consolefonts
+
+rm -f doc/pl/{DO_ZROBIENIA,ZMIANY}
+cp -a doc/en/TODO doc/pl/DO_ZROBIENIA
+cp -a doc/en/CHANGES doc/pl/ZMIANY
+
+gzip -9nf doc/en/* doc/pl/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
