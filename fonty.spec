@@ -1,5 +1,5 @@
 Summary:	Fonts on Linux console
-Summary(pl):	Fonty na konsoli Linuxa
+Summary(pl):	Fonty na konsoli Linuksa
 Name:		fonty
 Version:	1.0
 Release:	5
@@ -18,7 +18,7 @@ dynafont - a tool which allows displaying texts containing thousands
 of different characters.
 
 %description -l pl
-Niniejszy pakiet zawiera ró¿ne czcionki dla konsoli tekstowej Linuxa
+Niniejszy pakiet zawiera ró¿ne czcionki dla konsoli tekstowej Linuksa
 oraz dynafont - narzêdzie pozwalaj±ce wy¶wietlaæ teksty zawieraj±ce
 tysi±ce ró¿nych znaków.
 
