@@ -3,40 +3,41 @@ Summary(pl):	Fonty na konsoli Linuxa
 Name:		fonty
 Version:	1.0
 Release:	4
-Copyright:	GPL
+License:	GPL
 Group:		Utilities/Text
+Group(fr):	Utilitaires/Texte
 Group(pl):	Narzêdzia/Tekst
 Source0:	http://qrczak.home.ml.org/programy/linux/%{name}/%{name}-%{version}.tar.gz
-Source1:        iso02grf.psf.gz
+Source1:	iso02grf.psf.gz
 URL:		http://qrczak.home.ml.org/programy/linux/fonty/
 Requires:	console-tools
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The Fonty package contains various fonts for Linux text console and
-dynafont - a tool which allows displaying texts containing thousands of
-different characters.
+dynafont - a tool which allows displaying texts containing thousands
+of different characters.
 
 %description -l pl
-Niniejszy pakiet zawiera ró¿ne czcionki dla konsoli tekstowej Linuxa oraz
-dynafont - narzêdzie pozwalaj±ce wy¶wietlaæ teksty zawieraj±ce tysi±ce
-ró¿nych znaków.
+Niniejszy pakiet zawiera ró¿ne czcionki dla konsoli tekstowej Linuxa
+oraz dynafont - narzêdzie pozwalaj±ce wy¶wietlaæ teksty zawieraj±ce
+tysi±ce ró¿nych znaków.
 
 %prep
 %setup -q
 
 %build
 CXXFLAGS=$RPM_OPT_FLAGS make \
-	consoleprefix=/usr \
-	konwertprefix=/usr \
+	consoleprefix=%{_prefix} \
+	konwertprefix=%{_prefix} \
 	perl=%{_bindir}/perl \
 	docdir=%{_docdir}/%{name}-%{version}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 make install \
-	consoleprefix=$RPM_BUILD_ROOT/usr \
-	konwertprefix=$RPM_BUILD_ROOT/usr \
+	consoleprefix=$RPM_BUILD_ROOT%{_prefix} \
+	konwertprefix=$RPM_BUILD_ROOT%{_prefix} \
 	perl=%{_bindir}/perl \
 	docdir=$RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
 
