@@ -46,10 +46,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc %lang(en) doc/en
 %doc %lang(pl) doc/pl
-/usr/share/consolefonts/*
-/usr/share/consoletrans/*
+%{_datadir}/consolefonts/*
+%{_datadir}/consoletrans/*
 %attr(755, root, root) %{_libdir}/konwert/aux/dynafont
-%attr(755, root, root) /usr/share/konwert/filters/dynafont
+%attr(755, root, root) %{_datadir}/konwert/filters/dynafont
 
 %changelog
 * Tue Jan 26 1999 Micha³ Kuratczyk <kurkens@polbox.com>
