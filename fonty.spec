@@ -50,19 +50,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/consoletrans/*
 %attr(755,root,root) %{_libdir}/konwert/aux/dynafont
 %attr(755,root,root) %{_datadir}/konwert/filters/dynafont
-
-%changelog
-* Mon Jun 07 1999 Jan Rêkorajski <baggins@pld.org.pl>
-  [1.0-1]
-- spec cleanp
-
-* Tue Jan 26 1999 Micha³ Kuratczyk <kurkens@polbox.com>
-- added "Group(pl)"
-
-* Sat Nov 28 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [1.0-1]
-- simplification in %files,
-- removed "Prereq: perl".
-
-* Fri Sep 20 1998 Marcin 'Qrczak' Kowalczyk <qrczak@knm.org.pl>
-- First release in RPM
