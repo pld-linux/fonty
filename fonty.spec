@@ -17,7 +17,7 @@ dynafont - a tool which allows displaying texts containing thousands of
 different characters.
 
 %description -l pl
-Niniejszy pakiet zawiera ró¿ne fonty dla konsoli tekstowej Linuxa oraz
+Niniejszy pakiet zawiera ró¿ne czcionki dla konsoli tekstowej Linuxa oraz
 dynafont - narzêdzie pozwalaj±ce wy¶wietlaæ teksty zawieraj±ce tysi±ce
 ró¿nych znaków.
 
