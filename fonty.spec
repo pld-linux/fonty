@@ -2,7 +2,7 @@ Summary:	Fonts on Linux console
 Summary(pl):	Fonty na konsoli Linuksa
 Name:		fonty
 Version:	1.0
-Release:	7
+Release:	8
 License:	GPL
 Group:		Applications/Text
 Source0:	http://qrczak.ids.net.pl/programy/linux/%{name}/%{name}-%{version}.tar.gz
