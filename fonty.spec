@@ -35,7 +35,7 @@ CXXFLAGS=$RPM_OPT_FLAGS make \
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make install \
+%{__make} install \
 	consoleprefix=$RPM_BUILD_ROOT%{_prefix} \
 	konwertprefix=$RPM_BUILD_ROOT%{_prefix} \
 	perl=%{_bindir}/perl \
