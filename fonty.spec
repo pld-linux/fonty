@@ -2,7 +2,7 @@ Summary:	Fonts on Linux console
 Summary(pl):	Fonty na konsoli Linuxa
 Name:		fonty
 Version:	1.0
-Release:	3
+Release:	4
 Copyright:	GPL
 Group:		Utilities/Text
 Group(pl):	Narzêdzia/Tekst
@@ -56,6 +56,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc %lang(en) doc/en
 %doc %lang(pl) doc/pl
 %{_datadir}/consolefonts/*
-%{_datadir}/consoletrans/*
 %attr(755,root,root) %{_libdir}/konwert/aux/dynafont
 %attr(755,root,root) %{_datadir}/konwert/filters/dynafont
