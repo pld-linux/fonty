@@ -8,6 +8,7 @@ Group:		Applications/Text
 Source0:	http://qrczak.ids.net.pl/programy/linux/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	47e6886b287f175377c0d2d338d12a6e
 Source1:	iso02grf.psf.gz
+# Source1-md5:	178c094c51c202731358168f5f93b4c1
 URL:		http://qrczak.ids.net.pl/programy/linux/fonty/
 BuildRequires:	perl
 Requires:	console-tools
