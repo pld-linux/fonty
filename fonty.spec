@@ -6,6 +6,7 @@ Release:	6
 License:	GPL
 Group:		Applications/Text
 Source0:	http://qrczak.ids.net.pl/programy/linux/%{name}/%{name}-%{version}.tar.gz
+# Source0-md5:	47e6886b287f175377c0d2d338d12a6e
 Source1:	iso02grf.psf.gz
 URL:		http://qrczak.ids.net.pl/programy/linux/fonty/
 BuildRequires:	perl
