@@ -1,14 +1,14 @@
-Summary:     Fonts on Linux console
-Summary(pl): Fonty na konsoli Linuxa
-Name:	     fonty
-Version:     1.0
-Release:     1
-Copyright:   GPL
-Group:	     Utilities/Text
-Group(pl):   Narzêdzia/Tekst
-Source:	     http://qrczak.home.ml.org/programy/linux/%{name}/%{name}-%{version}.tar.gz
-URL:	     http://qrczak.home.ml.org/programy/linux/fonty/
-Requires:    console-tools
+Summary:	Fonts on Linux console
+Summary(pl):	Fonty na konsoli Linuxa
+Name:		fonty
+Version:	1.0
+Release:	2
+Copyright:	GPL
+Group:		Utilities/Text
+Group(pl):	Narzêdzia/Tekst
+Source:		http://qrczak.home.ml.org/programy/linux/%{name}/%{name}-%{version}.tar.gz
+URL:		http://qrczak.home.ml.org/programy/linux/fonty/
+Requires:	console-tools
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
@@ -29,7 +29,7 @@ CXXFLAGS=$RPM_OPT_FLAGS make \
 	consoleprefix=/usr \
 	konwertprefix=/usr \
 	perl=%{_bindir}/perl \
-	docdir=/usr/doc/fonty-%{version}
+	docdir=/usr/share/doc/fonty-%{version}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -37,7 +37,7 @@ make install \
 	consoleprefix=$RPM_BUILD_ROOT/usr \
 	konwertprefix=$RPM_BUILD_ROOT/usr \
 	perl=%{_bindir}/perl \
-	docdir=$RPM_BUILD_ROOT/usr/doc/fonty-%{version}
+	docdir=$RPM_BUILD_ROOT/usr/share/doc/fonty-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -52,6 +52,10 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_datadir}/konwert/filters/dynafont
 
 %changelog
+* Mon Jun 07 1999 Jan Rêkorajski <baggins@pld.org.pl>
+  [1.0-1]
+- spec cleanp
+
 * Tue Jan 26 1999 Micha³ Kuratczyk <kurkens@polbox.com>
 - added "Group(pl)"
 
