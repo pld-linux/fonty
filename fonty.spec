@@ -28,7 +28,7 @@ ró¿nych znaków.
 CXXFLAGS=$RPM_OPT_FLAGS make \
 	consoleprefix=/usr \
 	konwertprefix=/usr \
-	perl=/usr/bin/perl \
+	perl=%{_bindir}/perl \
 	docdir=/usr/doc/fonty-%{version}
 
 %install
@@ -36,7 +36,7 @@ rm -rf $RPM_BUILD_ROOT
 make install \
 	consoleprefix=$RPM_BUILD_ROOT/usr \
 	konwertprefix=$RPM_BUILD_ROOT/usr \
-	perl=/usr/bin/perl \
+	perl=%{_bindir}/perl \
 	docdir=$RPM_BUILD_ROOT/usr/doc/fonty-%{version}
 
 %clean
