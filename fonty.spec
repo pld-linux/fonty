@@ -59,6 +59,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/consolefonts/*
 # consoletrans/qrczak.fallback conflicts with console-data
 # and is useless with kbd (kbd doesn't support fallback tables)
-#%{_datadir}/consoletrans/*
+#%%{_datadir}/consoletrans/*
 %attr(755,root,root) %{_libdir}/konwert/aux/dynafont
 %attr(755,root,root) %{_datadir}/konwert/filters/dynafont
