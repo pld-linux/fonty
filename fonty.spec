@@ -9,7 +9,7 @@ Group(pl):   Narzêdzia/Tekst
 Source:	     http://qrczak.home.ml.org/programy/linux/%{name}/%{name}-%{version}.tar.gz
 URL:	     http://qrczak.home.ml.org/programy/linux/fonty/
 Requires:    console-tools
-BuildRoot:   /tmp/%{name}-%{version}-root
+BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
 The Fonty package contains various fonts for Linux text console and
