@@ -4,14 +4,16 @@ Name:		fonty
 Version:	1.0
 Release:	4
 License:	GPL
-Group:		Utilities/Text
+Group:		Applications/Text
+Group(de):	Applikationen/Text
 Group(fr):	Utilitaires/Texte
-Group(pl):	Narzêdzia/Tekst
-Source0:	http://qrczak.home.ml.org/programy/linux/%{name}/%{name}-%{version}.tar.gz
+Group(pl):	Aplikacje/Tekst
+Source0:	http://qrczak.ids.net.pl/programy/linux/%{name}/%{name}-%{version}.tar.gz
 Source1:	iso02grf.psf.gz
-URL:		http://qrczak.home.ml.org/programy/linux/fonty/
-Requires:	console-tools
+URL:		http://qrczak.ids.net.pl/programy/linux/fonty/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRequires:	perl
+Requires:	console-tools
 
 %description
 The Fonty package contains various fonts for Linux text console and
@@ -27,7 +29,10 @@ tysi±ce ró¿nych znaków.
 %setup -q
 
 %build
-CXXFLAGS=$RPM_OPT_FLAGS make \
+OPTFLAGS="%{?debug:-g -O}%{!?debug:$RPM_OPT_FLAGS -fomit-frame-pointer}"
+OPTFLAGS="$OPTFLAGS -fno-rtti -fno-exceptions"
+%{__make} \
+	CXXFLAGS="$OPTFLAGS" \
 	consoleprefix=%{_prefix} \
 	konwertprefix=%{_prefix} \
 	perl=%{_bindir}/perl \
