@@ -11,7 +11,8 @@ Source1:	iso02grf.psf.gz
 # Source1-md5:	178c094c51c202731358168f5f93b4c1
 Patch0:		%{name}-amd64.patch
 URL:		http://qrczak.ids.net.pl/programy/linux/fonty/
-BuildRequires:	perl
+BuildRequires:	perl-base
+BuildRequires:	libstdc++-devel
 Requires:	console-tools
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
