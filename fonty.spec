@@ -1,5 +1,5 @@
 Summary:	Fonts on Linux console
-Summary(pl):	Fonty na konsoli Linuksa
+Summary(pl.UTF-8):   Fonty na konsoli Linuksa
 Name:		fonty
 Version:	1.0
 Release:	8
@@ -21,10 +21,10 @@ The Fonty package contains various fonts for Linux text console and
 dynafont - a tool which allows displaying texts containing thousands
 of different characters.
 
-%description -l pl
-Niniejszy pakiet zawiera ró¿ne czcionki dla konsoli tekstowej Linuksa
-oraz dynafont - narzêdzie pozwalaj±ce wy¶wietlaæ teksty zawieraj±ce
-tysi±ce ró¿nych znaków.
+%description -l pl.UTF-8
+Niniejszy pakiet zawiera rÃ³Å¼ne czcionki dla konsoli tekstowej Linuksa
+oraz dynafont - narzÄ™dzie pozwalajÄ…ce wyÅ›wietlaÄ‡ teksty zawierajÄ…ce
+tysiÄ…ce rÃ³Å¼nych znakÃ³w.
 
 %prep
 %setup -q
