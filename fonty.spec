@@ -1,5 +1,5 @@
 Summary:	Fonts on Linux console
-Summary(pl.UTF-8):   Fonty na konsoli Linuksa
+Summary(pl.UTF-8):	Fonty na konsoli Linuksa
 Name:		fonty
 Version:	1.0
 Release:	8
