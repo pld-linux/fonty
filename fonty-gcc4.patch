@@ -1,0 +1,11 @@
+--- fonty-1.0/dynafont/dynafont.cc~	1998-09-18 15:35:08.000000000 +0200
++++ fonty-1.0/dynafont/dynafont.cc	2007-05-04 22:37:17.000000000 +0200
+@@ -202,7 +202,7 @@
+ 	numer (unsigned long nr1) : fragmentow (1), b (0), ul (0) {*nr = nr1;}
+ 	int operator == (const numer &n1) const;
+ 	int operator != (const numer &n1) const {return !(*this == n1);}
+-	int numer::hash () const;
++	int hash () const;
+ };
+ 
+ int numer::operator == (const numer &n1) const
