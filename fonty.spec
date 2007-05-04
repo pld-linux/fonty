@@ -2,14 +2,15 @@ Summary:	Fonts on Linux console
 Summary(pl.UTF-8):	Fonty na konsoli Linuksa
 Name:		fonty
 Version:	1.0
-Release:	8
+Release:	9
 License:	GPL
 Group:		Applications/Text
 Source0:	http://qrczak.ids.net.pl/programy/linux/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	47e6886b287f175377c0d2d338d12a6e
 Source1:	iso02grf.psf.gz
 # Source1-md5:	178c094c51c202731358168f5f93b4c1
-Patch0:		%{name}-amd64.patch
+Patch0:		%{name}-gcc4.patch
+Patch1:		%{name}-amd64.patch
 URL:		http://qrczak.ids.net.pl/programy/linux/fonty/
 BuildRequires:	perl-base
 BuildRequires:	libstdc++-devel
@@ -28,8 +29,9 @@ tysiące różnych znaków.
 
 %prep
 %setup -q
-%if "%{_lib}" == "lib64"
 %patch0 -p1
+%if "%{_lib}" == "lib64"
+%patch1 -p1
 %endif
 
 %build
